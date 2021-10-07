@@ -39,32 +39,35 @@ function WeatherLineChart({ forecastData }) {
 	}
 
 	return (
-		<ResponsiveContainer width="100%" aspect={3}>
-			<LineChart
-				width={500}
-				height={500}
-				data={data}
-				margin={{
-					top: 3,
-					right: 30,
-					left: 0,
-					bottom: 5,
-				}}
-			>
-				<CartesianGrid strokeDasharray="3 3" />
-				<XAxis dataKey="date" />
-				<YAxis />
-				<Tooltip content={<CustomTooltip />} />
-				<Legend />
-				<Line
-					type="monotone"
-					dataKey="high"
-					stroke="#8884d8"
-					activeDot={{ r: 8 }}
-				/>
-				<Line type="monotone" dataKey="low" stroke="#82ca9d" />
-			</LineChart>
-		</ResponsiveContainer>
+		<div>
+			<h2 className="chartName">Temperatures in next 7 days</h2>
+			<ResponsiveContainer width="100%" aspect={3}>
+				<LineChart
+					width={500}
+					height={500}
+					data={data}
+					margin={{
+						top: 3,
+						right: 30,
+						left: 0,
+						bottom: 5,
+					}}
+				>
+					<CartesianGrid strokeDasharray="3 3" />
+					<XAxis dataKey="date" />
+					<YAxis />
+					<Tooltip content={CustomTooltip} />
+					<Legend />
+					<Line
+						type="monotone"
+						dataKey="high"
+						stroke="#8884d8"
+						activeDot={{ r: 8 }}
+					/>
+					<Line type="monotone" dataKey="low" stroke="#82ca9d" />
+				</LineChart>
+			</ResponsiveContainer>
+		</div>
 	);
 }
 

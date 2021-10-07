@@ -1,7 +1,7 @@
 import React from "react";
-import WeatherCard from "./WeatherCard";
-import WeatherChart from "./WeatherChart";
-import data from "../weather.json";
+import WeatherCard from "../weatherCard/WeatherCard";
+import data from "../../weather.json";
+import WeatherLineChart from "../weatherLineChart/WeatherLineChart";
 
 function Weather() {
 	const weatherInfo = data.query.results.channel;
@@ -10,12 +10,10 @@ function Weather() {
 	return (
 		<div className="weather">
 			<div className="header">
-				<h1 className="header-name">
-					Weather App
-				</h1>
+				<h1 className="header-name">Weather App</h1>
 			</div>
 			<WeatherCard info={weatherInfo} />
-			<WeatherChart forecast = {forecast}/>
+			<WeatherLineChart forecastData={forecast} />
 		</div>
 	);
 }
