@@ -1,38 +1,104 @@
 .App {
-  text-align: center;
+	min-height: 100vh;
+	background: url(./assets/bg.svg) center 120% / auto no-repeat,
+		linear-gradient(rgb(249, 255, 255) 0%, rgb(56, 200, 230) 100%);
+	display: flex;
+	justify-content: center;
+	margin: 0px;
+}
+.weather {
+	max-width: 960px;
+	width: 100%;
+	margin: auto 0px;
+	padding: 0px 1rem;
+}
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header-name {
+	color: rgb(47, 93, 138);
+	font-size: 2rem;
+}
+.weather-card {
+	background-color: white;
+	padding: 20px;
+	margin: 2rem;
+	box-shadow: rgb(0 0 0 / 10%) 1px 1px 3px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.weather-row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.weather-col1 {
+	display: flex;
+	flex-direction: column;
+}
+.temp-color{
+	    font-size: 1.25rem;
+    color: rgb(58, 134, 202);
+	cursor: pointer;
+}
+.weather-col2 {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	margin-right: 1rem;
+	margin-bottom: 2rem;
+	margin-left: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather_location {
+	font-weight: 600;
+	font-size: 1.25rem;
+	color: rgb(57, 107, 174);
+}
+.displayFlex {
+	display: flex;
+}
+.direction {
+	justify-content: space-between;
+}
+.center {
+	justify-content: center;
+}
+.marginLeft {
+	margin-left: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.marginLeft2 {
+	margin-left: 2rem;
+}
+.font {
+	font-size: 1.1rem;
+}
+.marginTop3 {
+	margin-top: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.img_size {
+	width: 100px;
+	height: 100px;
 }
-
-.App-link {
-  color: #61dafb;
+.currentTemp {
+	font-weight: 200;
+	font-size: 7rem;
+	color: rgb(74, 111, 161);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.currentStatus {
+	font-size: 1.375rem;
+	text-align: left;
+	color: rgb(123, 152, 178);
+}
+.chartName{
+	display: flex;
+    justify-content: center;
+    color: rgb(47, 93, 138);
+}
+.color-key{
+	color:rgb(123, 152, 178)
 }
